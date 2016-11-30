@@ -22,9 +22,14 @@
 - (NSMutableArray *)colors
 {
     if (!_colors) {
-        _colors = [[NSMutableArray alloc] init];
-        ColorDesctiption *color = [[ColorDesctiption alloc] init];
-        [_colors addObject:color];
+        NSArray *archivedColors = [self readColorsFromArchive];
+        if (archivedColors) {
+            _colors = [[NSMutableArray alloc] initWithArray:archivedColors];
+        } else {
+            _colors = [[NSMutableArray alloc] init];
+        }
+        // ColorDesctiption *color = [[ColorDesctiption alloc] init];
+        // [_colors addObject:color];
     }
 
     return _colors;
@@ -86,6 +91,30 @@
     }
 
     return cv;
+}
+
+
+#pragma mark - archive
+
+- (NSString *)archivePath
+{
+    NSArray *docPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docPath = [docPaths firstObject];
+    return [docPath stringByAppendingPathComponent:@"colors.data"];
+}
+
+- (BOOL)saveColors
+{
+    NSString *writePath = [self archivePath];
+    BOOL written = [NSKeyedArchiver archiveRootObject:self.colors toFile:writePath];
+
+    return written;
+}
+
+- (NSArray *)readColorsFromArchive
+{
+    NSString *path = [self archivePath];
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:path];
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface PaletteViewController : UITableViewController <UIViewControllerRestoration>
 
+- (BOOL)saveColors;
+
 @end
