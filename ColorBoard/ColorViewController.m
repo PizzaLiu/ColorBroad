@@ -55,6 +55,8 @@
     [super viewWillDisappear:animated];
 }
 
+#pragma mark - IBAction
+
 - (IBAction)dismiss:(id)sender
 {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
@@ -70,6 +72,8 @@
 
     self.view.backgroundColor = color;
 }
+
+#pragma mark - restore
 
 + (UIViewController *)viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder
 {

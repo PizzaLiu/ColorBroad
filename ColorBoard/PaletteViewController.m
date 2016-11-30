@@ -19,12 +19,25 @@
 @implementation PaletteViewController
 
 
+- (NSMutableArray *)colors
+{
+    if (!_colors) {
+        _colors = [[NSMutableArray alloc] init];
+        ColorDesctiption *color = [[ColorDesctiption alloc] init];
+        [_colors addObject:color];
+    }
+
+    return _colors;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
 
     [self.tableView reloadData];
 }
+
+#pragma mark - tableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -40,6 +53,8 @@
 
     return cell;
 }
+
+#pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -58,16 +73,7 @@
     }
 }
 
-- (NSMutableArray *)colors
-{
-    if (!_colors) {
-        _colors = [[NSMutableArray alloc] init];
-        ColorDesctiption *color = [[ColorDesctiption alloc] init];
-        [_colors addObject:color];
-    }
-
-    return _colors;
-}
+#pragma mark - restore
 
 + (UIViewController *)viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder
 {
@@ -81,6 +87,5 @@
 
     return cv;
 }
-
 
 @end
