@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E4D8BC61DED66D600660B41 /* PaletteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D8BC51DED66D600660B41 /* PaletteViewController.m */; };
+		3E4D8BC91DED789100660B41 /* ColorDesctiption.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D8BC81DED789100660B41 /* ColorDesctiption.m */; };
 		3ED7D8C51DEC470700566762 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7D8C41DEC470700566762 /* main.m */; };
 		3ED7D8C81DEC470700566762 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7D8C71DEC470700566762 /* AppDelegate.m */; };
 		3ED7D8CB1DEC470700566762 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7D8CA1DEC470700566762 /* ViewController.m */; };
 		3ED7D8CE1DEC470700566762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED7D8CC1DEC470700566762 /* Main.storyboard */; };
 		3ED7D8D01DEC470700566762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED7D8CF1DEC470700566762 /* Assets.xcassets */; };
 		3ED7D8D31DEC470700566762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED7D8D11DEC470700566762 /* LaunchScreen.storyboard */; };
+		3ED7D8DC1DEC63B700566762 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7D8DB1DEC63B700566762 /* ColorViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E4D8BC41DED66D600660B41 /* PaletteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteViewController.h; sourceTree = "<group>"; };
+		3E4D8BC51DED66D600660B41 /* PaletteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteViewController.m; sourceTree = "<group>"; };
+		3E4D8BC71DED789100660B41 /* ColorDesctiption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorDesctiption.h; sourceTree = "<group>"; };
+		3E4D8BC81DED789100660B41 /* ColorDesctiption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorDesctiption.m; sourceTree = "<group>"; };
 		3ED7D8C01DEC470700566762 /* ColorBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED7D8C41DEC470700566762 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3ED7D8C61DEC470700566762 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +33,8 @@
 		3ED7D8CF1DEC470700566762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ED7D8D21DEC470700566762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3ED7D8D41DEC470700566762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ED7D8DA1DEC63B700566762 /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
+		3ED7D8DB1DEC63B700566762 /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +76,12 @@
 				3ED7D8D11DEC470700566762 /* LaunchScreen.storyboard */,
 				3ED7D8D41DEC470700566762 /* Info.plist */,
 				3ED7D8C31DEC470700566762 /* Supporting Files */,
+				3ED7D8DA1DEC63B700566762 /* ColorViewController.h */,
+				3ED7D8DB1DEC63B700566762 /* ColorViewController.m */,
+				3E4D8BC41DED66D600660B41 /* PaletteViewController.h */,
+				3E4D8BC51DED66D600660B41 /* PaletteViewController.m */,
+				3E4D8BC71DED789100660B41 /* ColorDesctiption.h */,
+				3E4D8BC81DED789100660B41 /* ColorDesctiption.m */,
 			);
 			path = ColorBoard;
 			sourceTree = "<group>";
@@ -152,7 +167,10 @@
 			files = (
 				3ED7D8CB1DEC470700566762 /* ViewController.m in Sources */,
 				3ED7D8C81DEC470700566762 /* AppDelegate.m in Sources */,
+				3ED7D8DC1DEC63B700566762 /* ColorViewController.m in Sources */,
 				3ED7D8C51DEC470700566762 /* main.m in Sources */,
+				3E4D8BC91DED789100660B41 /* ColorDesctiption.m in Sources */,
+				3E4D8BC61DED66D600660B41 /* PaletteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +319,7 @@
 				3ED7D8D91DEC470700566762 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
