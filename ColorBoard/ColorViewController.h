@@ -14,4 +14,6 @@
 @property (nonatomic, strong) ColorDesctiption *colorDesc;
 @property (nonatomic, assign) BOOL isExistingColor;
 
+- (void)saveEditingColor;
+
 @end

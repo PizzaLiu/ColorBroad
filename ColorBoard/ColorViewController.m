@@ -7,6 +7,7 @@
 //
 
 #import "ColorViewController.h"
+#import "PaletteViewController.h"
 
 @interface ColorViewController ()
 
@@ -48,10 +49,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    if (self.colorDesc) {
-        self.colorDesc.color = self.view.backgroundColor;
-        self.colorDesc.name = self.colorNameLabel.text;
-    }
+    [self saveEditingColor];
     [super viewWillDisappear:animated];
 }
 
@@ -91,9 +89,7 @@
 
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder
 {
-    self.colorDesc.color = self.view.backgroundColor;
-    self.colorDesc.name = self.colorNameLabel.text;
-
+    [self saveEditingColor];
     [coder encodeObject:self.colorDesc forKey:@"colorDesc"];
     [coder encodeBool:self.isExistingColor forKey:@"isExistingColor"];
 
@@ -106,6 +102,12 @@
     self.isExistingColor = [coder decodeBoolForKey:@"isExistingColor"];
 
     [super decodeRestorableStateWithCoder:coder];
+}
+
+- (void)saveEditingColor
+{
+    self.colorDesc.color = self.view.backgroundColor;
+    self.colorDesc.name = self.colorNameLabel.text;
 }
 
 @end

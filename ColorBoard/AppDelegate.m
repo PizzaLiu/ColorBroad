@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PaletteViewController.h"
+#import "ColorViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,8 +29,20 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     UINavigationController *nav = (UINavigationController *)self.window.rootViewController;
-    PaletteViewController *pvc = (PaletteViewController *)nav.viewControllers[0];
+    NSArray *cvs = nav.viewControllers;
+    int cvsCount = [cvs count];
+    if (cvsCount > 1) {
+        ColorViewController *cvc = nil;
+        if (cvsCount == 2) {
+            cvc = (ColorViewController *)cvs[1];
+        } else {
+            cvc = (ColorViewController *)cvs[2];
+        }
+        [cvc saveEditingColor];
+    }
+    PaletteViewController *pvc = (PaletteViewController *)cvs[0];
     [pvc saveColors];
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
