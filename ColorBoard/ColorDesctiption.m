@@ -14,8 +14,8 @@
 {
     self = [super init];
     if (self) {
-        _name = @"blue";
-        _color = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:1.0];
+        _name = @"white";
+        _color = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
     }
 
     return self;
