@@ -59,6 +59,35 @@
     return cell;
 }
 
+- (IBAction)toggleEditingMod:(id)sender
+{
+    if (self.isEditing) {
+        [sender setTitle:@"Edit"];
+        [self setEditing:NO animated:YES];
+    } else {
+        [sender setTitle:@"Done"];
+        [self setEditing:YES animated:YES];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.colors removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    if (sourceIndexPath.row == destinationIndexPath.row) {
+        return ;
+    }
+    ColorDesctiption *color = [self.colors objectAtIndex:sourceIndexPath.row];
+    [self.colors removeObjectAtIndex:sourceIndexPath.row];
+    [self.colors insertObject:color atIndex:destinationIndexPath.row];
+}
+
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -43,6 +43,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Colors" id="LWB-Sb-9K3">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="7FV-lB-11b">
+                            <connections>
+                                <action selector="toggleEditingMod:" destination="rhQ-LA-XMd" id="vI5-14-Sty"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bEy-7a-qzp">
                             <connections>
                                 <segue destination="1yy-zK-DQv" kind="presentation" identifier="NewColor" id="Ryd-Ft-EsA"/>
