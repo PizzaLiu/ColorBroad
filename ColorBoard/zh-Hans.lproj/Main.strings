@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Blue"; ObjectID = "3jE-er-t8x"; */
+"3jE-er-t8x.text" = "蓝";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "7FV-lB-11b"; */
+"7FV-lB-11b.title" = "编辑";
+
+/* Class = "UITextField"; placeholder = "Color Name"; ObjectID = "HRa-bk-lRZ"; */
+"HRa-bk-lRZ.placeholder" = "颜色名称";
+
+/* Class = "UINavigationItem"; title = "Colors"; ObjectID = "LWB-Sb-9K3"; */
+"LWB-Sb-9K3.title" = "颜色";
+
+/* Class = "UILabel"; text = "Red"; ObjectID = "oNT-Fb-HPi"; */
+"oNT-Fb-HPi.text" = "红";
+
+/* Class = "UILabel"; text = "Green"; ObjectID = "ofu-Of-JGG"; */
+"ofu-Of-JGG.text" = "绿";
+
+/* Class = "UILabel"; text = "Red"; ObjectID = "yom-3m-oUN"; */
+"yom-3m-oUN.text" = "Red";

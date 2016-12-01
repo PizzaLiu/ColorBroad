@@ -62,10 +62,10 @@
 - (IBAction)toggleEditingMod:(id)sender
 {
     if (self.isEditing) {
-        [sender setTitle:@"Edit"];
+        [sender setTitle:NSLocalizedString(@"Edit", @"Edit Color List")];
         [self setEditing:NO animated:YES];
     } else {
-        [sender setTitle:@"Done"];
+        [sender setTitle:NSLocalizedString(@"Done", @"Done in Editing Color List")];
         [self setEditing:YES animated:YES];
     }
 }
